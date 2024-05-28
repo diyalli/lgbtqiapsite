@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="logincontent.css">
+</head>
+<body>
+    <div class="login-content">
+        <form action="../cadastro/cadastro.js">
+            <input type="text" name="useren" id="iuseren" required placeholder="Usuário" minlength="6" maxlength="20" autocomplete="on">
+            <input type="email" name="emailen" id="iemailen" required placeholder="E-mail" minlength="40" maxlength="80" autocomplete="on">
+            <input type="password" name="passen" id="ipassen" required placeholder="Senha" autocomplete="on" min="8" max="20">
+            <select name="genen" id="igenen" required>
+                <optgroup label="Gênero">
+                    <option value="H">Homem</option>
+                    <option value="M">Mulher</option>
+                    <option value="NB">Não-binário</option>
+                    <option value="O">Outro</option>
+                </optgroup>
+            </select>
+            <label for="itermsen">
+                <input type="checkbox" name="termsen" id="itermsen"> Li e Concordo com os Termos de Uso.</label>
+                <input type="submit" value="Entrar">
+        </form>
+    </div>
+</body>
+</html>
