@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import url(https://fonts.google.com/specimen/Poppins);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 /*Configurações Globais*/
 
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-especial --fonte-padrao)
 }
 
 :root {
@@ -17,35 +18,82 @@
 
     --fonte-padrao: Arial, Helvetica, sans-serif;
     --fonte-especial: "Poppins", sans-serif;
+    --fonte-h1-header: "Tilt Warp";
+
+    --dark-mode: #000000;
 }
 
 /*Configurações Gerais*/
-
 header {
-    border: 1px solid black;
+    padding: 3px;
+    border: 1px solid var(--cor2);
+
+    background-image: url(../icons/favicon-32x32.png);
+    background-size: 43px;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 0.5%;
+}
+
+footer {
+    font-family: var(--fonte-especial);
+    padding: 5px;
+    border: 2px dashed var(--cor2);
 }
 
 /*Configurações Específicas*/
 
-header > button {
-    background-color: #009dff;
+header > #pix {
+    position: absolute;
+    top: 1.5%;
+    transform: translate(840%);
+
+    background-color: var(--cor2);
     border-radius: 50px;
-    outline: black solid 1.5px;
-    padding: 13px;
+    outline: var(--cor4) solid 1.8px;
+
+    padding: 8px;
 }
 
-header > button > a {
-    color: white;
+header > #pix > a {
+    color: var(--cor0);
+
     font-family: var(--fonte-especial);
     font-weight: bolder;
     font-size: 15px;
     text-decoration: none;
 }
 
+header > h1 {
+    position: relative;
+    transform: translate(4%);
+
+    font-family: var(--fonte-h1-header);
+    font-style: extrabold;
+    font-size: 40px;
+
+    background-image: linear-gradient(to bottom, #fea8b8, #ff6c87);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+
+    padding: auto;
+}
+
+footer > p {
+    text-align: center;
+}
+
 /*Congigurações Pseudo*/
 
-header > button:hover {
+header > #pix:hover {
+    background-color: var(--cor4);
+    border-radius: 50px;
+    outline: var(--cor2) solid 1.8px;
 
+    padding: 8px;
+    transition: transform 0.7s, border 1s;
 }
 
 /*Configurações de Divs e Id's*/
